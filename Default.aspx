@@ -5,5 +5,4 @@
     <div id="ImagenPrincipal" runat="server" style="width:100%">
         <asp:Image ID="MainSheldon" ImageUrl="~/images/main_sheldon.jpg" Height="80%" Width="100%" runat="server" />
     </div>
-
 </asp:Content>
