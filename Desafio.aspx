@@ -90,15 +90,24 @@
                 }
 
                     function nueva_pagina() {
-                        var pagina = document.getElementById(resultado).innerHTML;
-                        switch (pagina) {
-                            case 'Acertijos':
-                                window.location('~/acertijos', '_self', '');
-                                break;
-                            default:
-                                //window.location('~/default', '_self', '');
-                                window.location = '~/Default';
-                        }
+                        //var pagina = document.getElementById(resultado).innerHTML;
+                        //switch (pagina) {
+                        //    case 'Acertijos':
+                        //        open('/welcome', '_self');
+                        //        break;
+                        //    default:
+                        //        open('/Default', '_self');
+                        //}
+                        open('/Default', '_self');
+                        //var pagina = document.getElementById(resultado).innerHTML;
+                        //switch (pagina) {
+                        //    case 'Acertijos':
+                        //        window.location('~/acertijos', '_self', '');
+                        //        break;
+                        //    default:
+                        //        //window.location('~/default', '_self', '');
+                        //        window.location = '~/Default';
+                        //}
                     }
 
                 </script>
