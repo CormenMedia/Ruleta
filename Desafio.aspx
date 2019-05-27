@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Ruleta Matematicas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Desafio.aspx.cs" Inherits="Desafio" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="seleccion" class="modal fade" role="dialog">
+    <div id="algebra" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -10,12 +10,101 @@
                 </div>
                 <div class="modal-body">
                     <p>Jugarás con: &nbsp; 
-                        <label id="resultado"></label>
+                        <label id="res_algebra"></label>
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" onclick="nueva_pagina();" value="Continuar" />
-                    <%--<asp:Button ID="btn_ruleta" runat="server" OnClick="btn_ruleta_Click"  />--%>
+                    <input type="button" class="btn btn-default" data-dismiss="modal" onclick="pag_algebra();" value="Continuar" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="acertijos" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ruleta del reto Sheldon</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Jugarás con: &nbsp; 
+                        <label id="res_acertijos"></label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Continuar" onclick="pag_acertijos();" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="trigonometria" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ruleta del reto Sheldon</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Jugarás con: &nbsp; 
+                        <label id="res_trigonometria"></label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Continuar" onclick="pag_trigonometria();" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aritmetica" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ruleta del reto Sheldon</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Jugarás con: &nbsp; 
+                        <label id="res_aritmetica"></label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Continuar" onclick="pag_aritmetica();" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="adivinanzas" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ruleta del reto Sheldon</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Jugarás con: &nbsp; 
+                        <label id="res_adivinanzas"></label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Continuar" onclick="pag_adivinanzas();" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="problemas" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ruleta del reto Sheldon</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Jugarás con: &nbsp; 
+                        <label id="res_problemas"></label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Continuar" onclick="pag_problemas();" />
                 </div>
             </div>
         </div>
@@ -64,8 +153,32 @@
                 function Mensaje() {
                     var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
                     //alert("Elemento seleccionado:" + SegmentoSeleccionado.text + "!");
-                    document.querySelector('#resultado').innerText = SegmentoSeleccionado.text;
-                    $('#seleccion').modal('show');
+                    switch (SegmentoSeleccionado.text) {
+                        case 'Algebra':
+                            document.querySelector('#res_algebra').innerText = SegmentoSeleccionado.text;
+                            $('#algebra').modal('show');
+                            break;
+                        case 'Acertijos':
+                            document.querySelector('#res_acertijos').innerText = SegmentoSeleccionado.text;
+                            $('#acertijos').modal('show');
+                            break;
+                        case 'Trigonometria':
+                            document.querySelector('#res_trigonometria').innerText = SegmentoSeleccionado.text;
+                            $('#trigonometria').modal('show');
+                            break;
+                        case 'Aritmética':
+                            document.querySelector('#res_aritmetica').innerText = SegmentoSeleccionado.text;
+                            $('#aritmetica').modal('show');
+                            break;
+                        case 'Adivinanzas':
+                            document.querySelector('#res_adivinanzas').innerText = SegmentoSeleccionado.text;
+                            $('#adivinanzas').modal('show');
+                            break;
+                        case 'Problemas':
+                            document.querySelector('#res_problemas').innerText = SegmentoSeleccionado.text;
+                            $('#problemas').modal('show');
+                            break;
+                    }
                     //Reinicio de la ruleta (Valor Inicial)
                     miRuleta.stopAnimation(false);
                     miRuleta.rotationAngle = 0;
@@ -89,7 +202,32 @@
                     ctx.fill();
                 }
 
+                    function pag_algebra() {
+                        location.replace('/algebra.aspx');
+                    }
+
+                    function pag_acertijos() {
+                        location.replace('/acertijos.aspx');
+                    }
+
+                    function pag_trigonometria() {
+                        location.replace('/trigonometria.aspx');
+                    }
+
+                    function pag_aritmetica() {
+                        location.replace('/aritmetica.aspx');
+                    }
+
+                    function pag_adivinanzas() {
+                        location.replace('/adivinanzas.aspx');
+                    }
+
+                    function pag_problemas() {
+                        location.replace('/problemas.aspx');
+                    }
+
                     function nueva_pagina() {
+                        
                         //var pagina = document.getElementById(resultado).innerHTML;
                         //switch (pagina) {
                         //    case 'Acertijos':

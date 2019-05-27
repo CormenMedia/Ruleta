@@ -17,12 +17,12 @@ public partial class Desafio : System.Web.UI.Page
         mensaje_res.Text = "Funciona";
     }
 
-    protected void btn_ruleta_Click(object sender, EventArgs e)
-    {
-        string a;
+    //protected void btn_ruleta_Click(object sender, EventArgs e)
+    //{
+    //    string a;
 
-        //a = resultado.ToString();
+    //    //a = resultado.ToString();
 
-        //Response.Redirect(resultado.ToString());
-    }
+    //    //Response.Redirect(resultado.ToString());
+    //}
 }
