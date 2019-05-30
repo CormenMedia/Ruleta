@@ -18,7 +18,7 @@
         </form>
     </div>
     <div class="container2">    
-        <asp:Button ID="btn_continuar" runat="server" CssClass="btn btn-info" Text="Continuar ASP" 
+        <asp:Button ID="btn_continuar" runat="server" CssClass="btn btn-info" Text="Continuar" 
             OnClick="btn_continuar_Click" UseSubmitBehavior="false" OnClientClick="this.disbaled=true;" />
 <%--        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#reto">Continuar</button>
         <div id="reto" class="collapse">

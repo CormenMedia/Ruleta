@@ -130,7 +130,7 @@
                 <canvas id="canvas" height="300" width="300"></canvas>
                 <script>
                 let miRuleta = new Winwheel({
-                    'numSegments': 6,
+                    'numSegments': 5,
                     'outerRadius': 150,
                     'textFontSize': 16,
                     'textMargin': 0,
@@ -139,7 +139,7 @@
                         { 'fillstyle': '#89f26e', 'text': 'Acertijos' },
                         { 'fillstyle': '#7de6ef', 'text': 'Trigonometria' },
                         { 'fillstyle': '#e7706f', 'text': 'Aritmética' },
-                        { 'fillstyle': '#eae56f', 'text': 'Adivinanzas' },
+                        //{ 'fillstyle': '#eae56f', 'text': 'Adivinanzas' },
                         { 'fillstyle': '#89f26e', 'text': 'Problemas' },
                     ],
                     'animation': {
