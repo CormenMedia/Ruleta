@@ -23,7 +23,7 @@
                             <HeaderStyle Font-Bold="true" Width="40px" HorizontalAlign="Center" />
                             <ItemStyle HorizontalAlign="Right" />
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="cd_grado" HeaderText="Grado" Visible="true">
+                        <asp:BoundColumn DataField="cd_grado" HeaderText="Grado" Visible="false">
                             <HeaderStyle Font-Bold="true" Width="40px" HorizontalAlign="Center" />
                             <ItemStyle HorizontalAlign="Right" />
                         </asp:BoundColumn>

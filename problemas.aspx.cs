@@ -23,7 +23,7 @@ public partial class problemas : System.Web.UI.Page
             result.Style["DISPLAY"] = "none";
             SqlConnection con = new SqlConnection("Data Source = den1.mssql8.gear.host; User ID = mate; Password = Mb1apc_Z~n8V; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
             con.Open();
-            string query = @"select TOP 3 * from tbl_preguntas where cd_area = 2  order by NEWID()";
+            string query = @"select TOP 3 * from tbl_preguntas where cd_area = 5 order by NEWID()";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(ds);

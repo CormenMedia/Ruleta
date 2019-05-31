@@ -10,7 +10,7 @@
             <asp:ListItem Text="Respuesta 3" Value="2"></asp:ListItem>
         </asp:RadioButtonList>
         <asp:Button ID="cmd_q1" runat="server" UseSubmitBehavior="false" OnClientClick="this.disabled=true;" 
-            OnClick="cmd_q1_Click" Text="Continuar" />
+            OnClick="cmd_q1_Click" Text="Continuar" CssClass="btn btn-success" />
     </div>
     <div id="q2" runat="server" style="display:block">
         <asp:Image ID="imagen02" runat="server" ImageUrl="" />
@@ -20,7 +20,7 @@
             <asp:ListItem Text="Respuesta 3" Value="2"></asp:ListItem>
         </asp:RadioButtonList>
         <asp:Button ID="cmd_q2" runat="server" UseSubmitBehavior="false" OnClientClick="this.disabled=true;" 
-            OnClick="cmd_q2_Click" Text="Continuar" />
+            OnClick="cmd_q2_Click" Text="Continuar" CssClass="btn btn-success" />
     </div>
     <div id="q3" runat="server" style="display:block">
         <asp:Image ID="imagen03" runat="server" ImageUrl="" />
@@ -30,15 +30,17 @@
             <asp:ListItem Text="Respuesta 3" Value="2"></asp:ListItem>
         </asp:RadioButtonList>
         <asp:Button ID="cmd_q3" runat="server" UseSubmitBehavior="false" OnClientClick="this.disabled=true;" 
-            OnClick="cmd_q3_Click" Text="Continuar" />
+            OnClick="cmd_q3_Click" Text="Continuar" CssClass="btn btn-success" />
     </div>
     <div id="result" runat="server" style="display:block">
         <asp:Label ID="usuario" runat="server" ></asp:Label>
         <br />
-        Obtuviste un total de:
-        <asp:Label ID="puntuacion" runat="server"></asp:Label> &nbsp; puntos <br />
+        <h2>Obtuviste un total de:
+        <asp:Label ID="puntuacion" runat="server"></asp:Label> &nbsp; puntos <br /></h2>
+        <p></p>
+        <h4>Muestra ésta pantalla para obtener tu premio y da clic en terminar para guardar tu puntuación</h4>
         <p></p>
         <asp:Button ID="cmd_terminar" runat="server" UseSubmitBehavior="false" OnClientClick="this.disabled=true;" 
-            OnClick="cmd_terminar_Click" Text="Terminar" />
+            OnClick="cmd_terminar_Click" Text="Terminar" CssClass="btn btn-success" />
     </div>
 </asp:Content>
